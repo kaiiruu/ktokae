@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/gift.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Happy Mother's Day</title>
+</head>
+<body>
+    <div class="night"></div>
+
+    <h1 class="title"></h1>
+
+    <div style="position: absolute; top: 60vh; width: 100%; display: flex; justify-content: center;">
+        <a class="btn" id="goBtn" style="display: flex; align-items: center; gap: 0.5em; cursor: pointer;">
+            <img src="images/gift.png" class="text" alt="gift" style="width: 1em; height: 1em; object-fit: contain; display: inline-block; vertical-align: middle;">
+            <span class="text">Click here</span>
+        </a>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script>
+        document.getElementById('goBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            setTimeout(function () {
+                window.location.href = 'flower.html';
+            }, 700);
+        });
+    </script>
+</body>
+</html>
